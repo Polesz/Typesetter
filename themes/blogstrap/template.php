@@ -13,11 +13,6 @@ include_once($path);
 		common::LoadComponents( 'uikit-js' );
 		gpOutput::GetHead();
 	?>
-	<!--[if lt IE 9]><?php
-		// HTML5 shim, for IE6-8 support of HTML5 elements
-		gpOutput::GetComponents( 'html5shiv' );
-		gpOutput::GetComponents( 'respondjs' );
-	?><![endif]-->
 <body>
 	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 		<nav class="uk-navbar uk-margin-large-bottom">
@@ -79,7 +74,7 @@ include_once($path);
 						'selected'			=> '',
 						'selected_li'		=> '',
 						'childselected'		=> '',
-						'childselected_li'	=> '',
+						'childselected_li'	=> 'uk-active',
 						'li_'				=> '',
 						'li_title'			=> '',
 						'haschildren'		=> 'uk-parent',
