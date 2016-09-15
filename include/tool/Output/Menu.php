@@ -874,8 +874,14 @@ class Menu{
 	 *
 	 */
 	protected  function CloseLevel( $level){
+		global $GP_MENU_CLASSES;
 		while( $level < $this->prev_level){
-			echo '</li></ul>';
+			//uikit navbar close div
+			if( strpos($GP_MENU_CLASSES['child_ul'],'uk-nav-navbar') ) {
+				echo '</div></li>';
+			}else{
+				echo '</li></ul>';
+			}	
 
 			$this->prev_level--;
 		}
