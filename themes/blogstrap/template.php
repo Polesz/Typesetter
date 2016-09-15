@@ -20,17 +20,7 @@ include_once($path);
 		gpOutput::GetComponents( 'html5shiv' );
 		gpOutput::GetComponents( 'respondjs' );
 	?><![endif]-->
-	<script>(function(d, s, id) {
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) return;
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v2.7&appId=658880857623118";
-		fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
-	</script>
 <body>
-	<div id="fb-root"></div>
-	<!--	<a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none;">Top<span></span></a> -->
 	<div class="uk-container uk-container-center uk-margin-top uk-margin-large-bottom">
 		<nav class="uk-navbar uk-margin-large-bottom">
 			<?php global $config; echo common::Link('',$config['title'],'','class="uk-navbar-brand uk-hidden-small"'); ?>
