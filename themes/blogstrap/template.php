@@ -10,8 +10,6 @@ include_once($path);
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php
-		global $uikit_style;
-		$uikit_style="gradient"; // default, gradient, almost-flat
 		common::LoadComponents( 'uikit-js' );
 		gpOutput::GetHead();
 	?>
