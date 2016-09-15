@@ -39,6 +39,7 @@ class Configuration extends \gp\special\Base{
 
 						'Interface'				=> false,
 						'colorbox_style'		=> array('example1'=>'Example 1', 'example2'=>'Example 2', 'example3'=>'Example 3', 'example4'=>'Example 4', 'example5'=>'Example 5' ),
+						'uikit_style'			=> array('default'=>'default', 'gradient'=>'gradient', 'almostflat'=>'almost-flat' ),
 						'language'				=> '',
 						'langeditor'			=> '',
 						'showsitemap'			=> 'boolean',

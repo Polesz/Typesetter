@@ -7,7 +7,6 @@ defined('is_running') or die('Not an entry point...');
 
 class Combine{
 
-
 	public static $scripts = array(
 
 				//cms
@@ -28,7 +27,6 @@ class Combine{
 										'type'			=> 'css',
 										'requires'		=> 'ui-theme'),
 
-
 				//colorbox
 				'colorbox'	=> array(	'file'			=> '/include/thirdparty/colorbox139/colorbox/jquery.colorbox.js',
 										'requires'		=> 'gp-main,colorbox-css'),
@@ -36,7 +34,6 @@ class Combine{
 
 				'colorbox-css' => array('file'			=> '/include/thirdparty/colorbox139/$config[colorbox_style]/colorbox.css',
 										'type'			=> 'css'),
-
 
 				//jquery
 				'jquery'	=> array(	'file'			=> '/include/thirdparty/js/jquery.js',
@@ -46,9 +43,7 @@ class Combine{
 															'CloudFlare'	=> '//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js',
 															'Google'		=> '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js',
 															),
-
 										),
-
 
 				//jquery ui core
 				'ui-theme'	=> array(	'file'			=> '/include/thirdparty/jquery_ui/jquery-ui.min.css',
@@ -78,8 +73,6 @@ class Combine{
 
 				'widget'	=> array(	'file'			=> '/include/thirdparty/jquery_ui/widget.js',
 										'package'		=> 'jquery_ui'),
-
-
 
 				//jquery ui interactions
 				'draggable'	=> array(	'file'			=> '/include/thirdparty/jquery_ui/draggable.js'
@@ -144,8 +137,6 @@ class Combine{
 				'tabs'	=> array(		'file'			=> '/include/thirdparty/jquery_ui/tabs.js'
 										,'requires'		=> 'ui-core,widget,ui-theme'
 										,'package'		=> 'jquery_ui'),
-
-
 
 				//jquery ui effects
 				'effects-core'	=> array('file'			=> '/include/thirdparty/jquery_ui/effect.js'
@@ -310,7 +301,6 @@ class Combine{
 										'package'		=> 'bootstrap',
 										'requires'		=> 'bootstrap-responsive-css,bootstrap-js'),
 
-
 				// Bootstrap3
 				'bootstrap3-js' => array(
 										'file'			=> '/include/thirdparty/Bootstrap3/js/bootstrap.min.js',
@@ -374,7 +364,6 @@ class Combine{
 										'file'			=> '/include/thirdparty/Bootstrap3/js/transition.js',
 										'package'		=> 'bootstrap3'),
 
-
 				//fontawesome
 				'fontawesome'			=> array(
 										'file'			=> '/include/thirdparty/fontawesome/css/font-awesome.min.css',
@@ -393,14 +382,19 @@ class Combine{
 															),
 										),
 
-
 				'colorbox-css' => array('file'			=> '/include/thirdparty/colorbox139/$config[colorbox_style]/colorbox.css',
 										'type'			=> 'css'),
 
+				//uikit 2.27.1
+				'uikit-css' => array(
+										'file'			=> '/include/thirdparty/uikit/css/uikit.$config[uikit_style].min.css',
+										'type'			=> 'css'),
 
+				'uikit-js' => array(
+										'file'			=> '/include/thirdparty/uikit/js/uikit.min.js',
+										'package'		=> 'uikit',
+										'requires'		=> 'uikit-css'),
 		);
-
-
 
 	/**
 	 * Generate a file with all of the combined content
@@ -616,7 +610,7 @@ class Combine{
 		}
 
 		self::$scripts['colorbox-css']['file'] = '/include/thirdparty/colorbox139/'.$config['colorbox_style'].'/colorbox.css';
-
+		self::$scripts['uikit-css']['file'] = '/include/thirdparty/uikit/css/uikit.'.$config['uikit_style'].'.min.css';
 		$all_scripts = array();
 
 		//get all scripts

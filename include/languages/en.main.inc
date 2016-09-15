@@ -506,4 +506,5 @@ continue using your old password.</p>',
 	'_characters'                    => '%s characters',
 	'Theme_default_sizes'            => 'Default Size',
 	'context menu'                   => 'Browser Context Menu',
+	'uikit_style'                    => 'UIkit style',
 );

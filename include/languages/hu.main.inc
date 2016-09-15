@@ -500,4 +500,5 @@ $langmessage = array (
 	'_characters'                    => '%s karakter',
 	'Theme_default_sizes'            => 'Alapértelmezett méret',
 	'context menu'                   => 'Browser Context Menu',
+	'uikit_style'                    => 'UIkit stílus',
 );
